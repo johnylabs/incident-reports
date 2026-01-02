@@ -22,6 +22,7 @@ The reports are written to mirror **operational SOC documentation** used by secu
 
 ## Repository Structure
 
+```text
 incident-reports/
 ├── README.md
 ├── docs/
