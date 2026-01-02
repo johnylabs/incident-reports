@@ -1,75 +1,14 @@
-# 🧾 incident-reports
+# SOC Incident Reports
 
-Structured SOC incident reports from my lab environments  
-(Wazuh, Suricata, lab-core-network, ug-aws-hybrid-soc-lab, etc.).
+This repository contains **realistic, end-to-end SOC incident investigations**
+based on alerts generated in my lab environments (Wazuh, Suricata, cloud logs).
 
-Each report is a **full story** from detection → triage → containment → recovery → lessons learned, written like a real SOC case.
+Each case demonstrates how I work as a SOC analyst:
+- Alert triage and validation
+- Evidence collection and correlation
+- Timeline reconstruction
+- MITRE ATT&CK mapping
+- Clear written communication for escalation and reporting
 
-This repo is for:
-
-- Practicing **professional-grade incident reporting**
-- Building a portfolio of **realistic SOC cases**
-- Feeding future tools (e.g. `ai-soc-runbook-qa`) with high-quality examples
-
----
-
-## 🎯 Goals
-
-- Use a **consistent format** for every incident:
-  - Executive summary
-  - Scope / impact
-  - Timeline
-  - Root cause
-  - MITRE ATT&CK mapping
-  - Remediation + lessons learned
-- Store **supporting evidence** in a clean structure:
-  - Log extracts
-  - Screenshots
-  - Diagrams
-- Link incidents back to:
-  - Threat hunting (`threat-hunting`)
-  - Detections (`soc-alert-automation`)
-  - Architecture (`lab-core-network`, `ug-aws-hybrid-soc-lab`)
-
----
-
-## 📂 Repository Structure
-
-```text
-incident-reports/
-├── README.md
-├── docs/
-│   ├── methodology.md              # how I write and review incidents
-│   ├── report-lifecycle.md         # from detection to post-incident review
-│   └── severity-matrix.md          # how I grade severity/priority
-├── templates/
-│   ├── report-template.md          # main incident report template
-│   ├── timeline-template.md        # detailed timeline template
-│   └── customer-summary-template.md# 1-page non-technical summary format
-├── cases/
-│   ├── 2025-01-lab-ssh-bruteforce/
-│   │   ├── report.md               # full narrative incident report
-│   │   ├── timeline.md             # minute-by-minute SOC view
-│   │   ├── mitre-mapping.md        # ATT&CK techniques + detection notes
-│   │   └── evidence/
-│   │       ├── logs/
-│   │       │   ├── wazuh-alerts.json
-│   │       │   └── suricata-events.json
-│   │       └── screenshots/
-│   │           ├── wazuh-dashboard.png
-│   │           └── kibana-timeline.png
-│   ├── 2025-02-dns-tunneling-lab/
-│   │   ├── report.md
-│   │   ├── timeline.md
-│   │   ├── mitre-mapping.md
-│   │   └── evidence/
-│   │       ├── logs/
-│   │       └── screenshots/
-│   └── 2025-XX-<short-name>/
-│       └── ...                     # same structure for future incidents
-└── exports/
-    ├── redacted/
-    │   ├── 2025-01-lab-ssh-bruteforce-redacted.pdf
-    │   └── 2025-02-dns-tunneling-lab-redacted.pdf
-    └── metrics/
-        └── incident-metrics.csv    # for tracking counts/MTTR/etc.
+These reports are written to mirror **Tier 1–2 SOC workflows** and
+incident documentation used in operational security teams.
